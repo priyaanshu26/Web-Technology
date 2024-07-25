@@ -1,0 +1,67 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Product Details</title>
+    </head>
+    <body>
+        <script>
+            var arr = [{
+                ProductName: "jynthbgr",
+                Price: 1000000,
+                Quantity: 6541,
+            },
+                {ProductName: "tnhbgrvc",
+                Price: 45621,
+                Quantity: 6565,
+            },
+                {ProductName: "thbgrv",
+                Price: 1525245,
+                Quantity: 6154,
+            },
+                {ProductName: "tbgvf",
+                Price: 9456,
+                Quantity: 9511,
+            },
+                {ProductName: "tnbhgrv",
+                Price: 8465,
+                Quantity: 364,
+            },            
+                {ProductName: "zelsbetjvx",
+                Price: 6834735,
+                Quantity: 95156,
+            }
+            ]
+            document.write("<table border=1")
+            document.write("<tr>")
+                    document.write("<th>")
+                        document.write("Product Name")
+                        document.write("</th>")
+                        document.write("<th>")
+                        document.write("Price")
+                        document.write("</th>")
+                        document.write("<th>")
+                        document.write("Quantity")
+                        document.write("</th>")
+                    document.write("</tr>")
+            for (let i = 0; i < arr.length; i++) {
+    
+                document.write("<tr>")
+                    document.write("<td>")
+                document.write(arr[i].ProductName)
+                    document.write("</td>")
+                    document.write("<td>")
+                document.write(arr[i].Price)
+    
+                document.write("</td>")
+                document.write("<td>")
+    
+                document.write(arr[i].Quantity)
+                document.write("</td>")
+                document.write("</tr>")
+                }
+                document.write("</table>")
+        </script>
+    </body>
+    </html>

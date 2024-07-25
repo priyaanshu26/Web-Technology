@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyboardEvent</title>
+</head>
+<body>
+    <div class="container">
+        <h2>
+            Press Down Any key to change background color to red.
+            <br>
+            Release Up Any key to change background color to blue.
+            <br>
+            Press Any key to change background color to Yellow.
+        </h2>
+    </div>
+    
+    <script>
+        a= Math.floor(Math.random*255);
+        b= Math.floor(Math.random*255);
+        c= Math.floor(Math.random*255);
+
+        document.body.addEventListener('keydown', (e) => {document.body.style.backgroundColor='red'
+        console.log(e.key)})
+        
+        document.body.addEventListener('keyup', () => {document.body.style.backgroundColor='blue'
+        console.log("up")})
+        
+
+        document.body.addEventListener('keypress', () => {document.body.style.backgroundColor='yellow'
+        console.log("press")})
+        
+    </script>
+</body>
+</html>

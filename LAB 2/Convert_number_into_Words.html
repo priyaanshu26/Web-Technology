@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers into Words</title>
+</head>
+<body>
+    <script>
+        arr1= ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
+        arr2= ["eleven", "twelve", "thirteen", "fourteen", "fifteen","sixteen", "seventeen", "eighteen", "ninteen"];
+        arr3= ["twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninty",];
+        n=parseInt(prompt("Enter N: "));
+        if(n>1000){
+            document.write("Out of Range");
+        }
+        if(isNaN(n)){
+            document.write(" N is Not a number");
+        }
+        else{
+            if(n==0){
+                document.write("zero");
+            }else if(n>=1 && n<=10){
+                document.write(arr1[n-1]);
+            }else if(n>10 && n<20){
+                document.write(arr2[n-11]);
+            }else if (n>=20 && n<100){
+            var tens= Math.floor(n/10);
+            var ones = n%10;
+            if(ones>0){
+                document.write(arr3[tens-2] + " " + arr1[ones-1]);
+            }else{
+                document.write(arr3[tens-2]);
+            }
+            }else if(n>=100 && n<1000){
+                var hundreds = Math.floor(n/100);
+                var tens = Math.floor((n%100)/10);
+                var ones = n%10;
+                document.write(arr1[hundreds-1] + " hundred ");
+                if(tens>0 && ones>0){
+                    document.write(arr3[tens-2] + " " + arr1[ones-1]);
+                    }else if(tens>0){
+                        document.write(arr3[tens-2]);
+                        }else if(ones>0){
+                            document.write(arr1[ones-1]);
+                            }
+                }
+            }
+    </script>
+</body>
+</html>

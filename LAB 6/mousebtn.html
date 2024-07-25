@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse btn</title>
+    <style>
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <button id="click">Click</button>
+    <button id="dblclick">Double Click</button>
+    <button id="down">Mouse Down</button>
+    <button id="move">Mouse Move</button>
+    <button id="over">Mouse Over</button>
+    <button id="out">Mouse Out</button>
+    <button id="up">Mouse Up</button>
+    <script>
+        document.getElementById('click').addEventListener('click', () => alert('Button clicked'));
+        document.getElementById('dblclick').addEventListener('dblclick', () => alert('Button double clicked'));
+        document.getElementById('down').addEventListener('mousedown', () => alert('Button mousedown'));
+        document.getElementById('move').addEventListener('mousemove', () => alert('Button mousemove'));
+        document.getElementById('over').addEventListener('mouseover', () => alert('Button mouseover'));
+        document.getElementById('out').addEventListener('mouseout', () => alert('Button mouseout'));
+        document.getElementById('up').addEventListener('mouseup', () => alert('Button mouseup'));
+    </script>
+</body>
+</html>

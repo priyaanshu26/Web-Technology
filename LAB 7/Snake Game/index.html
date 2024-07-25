@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        Snake Game
+    </div>
+    <div class="area">
+        <div class="data">
+            <div class="text">Score</div>
+            <div id="score">0</div>
+            <hr>
+            <div class="text">Highest Score</div>
+            <div id="highestScore">0</div>
+            <hr>
+            <div class="button">
+                <button onclick="changeButton()" id="start">Start</button>
+                <button onclick="restart()" id="restart">Restart</button>
+            </div>
+        </div>
+        <div class="gameArea">
+            <div id="outer">
+                <script>
+                    for(i = 1;i <= 289;i++){
+                        document.write( "<div class='box' id='" + i + "'></div>" ); 
+                    }
+                </script>
+            </div>
+            <div id="outer2">
+                <script>
+                    for(i = 1;i <= 289;i++){
+                        // if(i % 2 == 0) document.write( "<div class='box' style='background-color: #57cc99; '></div>" );
+                        // else document.write( "<div class='box' style='background-color: #c7f9cc; '></div>" );
+                        document.write( "<div class='box'><div class='b' style='background-color: #57cc99; '></div><div class='b' style='background-color: #c7f9cc; '></div><div class='b' style='background-color: #c7f9cc; '></div><div class='b' style='background-color: #57cc99; '></div></div>" );
+                    }
+                </script>
+            </div>
+        </div>
+        <div class="rightSide">
+            <div class="text">Levels</div>
+            <hr>
+            <button onclick="changeLevelTo(1)" class="level" id="l1">1</button>
+            <button onclick="changeLevelTo(2)" class="level" id="l2">2</button>
+            <button onclick="changeLevelTo(3)" class="level" id="l3">3</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

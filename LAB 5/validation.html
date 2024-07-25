@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+    <style>
+        input {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        button {
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid black;
+        }
+
+        #uname {
+            width: 200px;
+        }
+
+        #pass {
+            width: 200px;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="uname" placeholder="Username">
+    <input type="text" id="pass" placeholder="Password">
+    <input type="text" id="rpass" placeholder="Repeat Password">
+    <input type="number" id="enroll" placeholder="Enrollment Number">
+    <input type="date" id="dob" placeholder="Date of Birth">
+    <input type="email" id="email" placeholder="Email">
+
+    <button onclick="validate()">Submit</button>
+
+    <script>
+        function validate() {
+            var uname = document.getElementById("uname").value;
+            var pass = document.getElementById("pass").value;
+            var rpass = document.getElementById("rpass").value;
+            var enroll = document.getElementById("enroll").value;
+            var dob = document.getElementById("dob").value;
+            var email = document.getElementById("email").value;
+            if (uname.length < 8) {
+                alert("Username should be atleast 8 characters long");
+            }
+            let pattern = /^(?=.*[0-9]) (?=.*[!@#$%^&*]) $/;
+            var regex = new RegExp(pattern);
+            // if (!regex.test(pass)) {
+                alert("Password should contain atleast one special character and one number");
+            // } else if (pass != rpass) {
+            //     alert("Passwords do not match");
+            // } else if (enroll.length != 11) {
+            //     alert("Enrollment number should be 11 digits long");
+            // }
+        
+        function calculateAge(dob) {
+            // Get today's date in milliseconds
+            const today = Date.now();
+
+            // Convert the date of birth to milliseconds
+            const dobInMilliseconds = new Date(dateOfBirth).getTime();
+
+            // Calculate the difference in milliseconds
+            const timeDifference = today - dobInMilliseconds;
+
+            // Convert the difference to years (adjusting for leap years is complex and omitted here for simplicity)
+            const ageInYears = Math.floor(timeDifference / (1000 * 60 * 60 * 24 * 365));
+
+            return ageInYears;
+        }
+
+        // Example usage
+        const dobString = "1980-10-26"; // You can get this from user input or other sources
+        const age = calculateAge(dob);
+
+        console.log("Age:", age);
+    }
+    </script>
+</body>
+
+</html>

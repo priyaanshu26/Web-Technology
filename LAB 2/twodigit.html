@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        n = parseInt(prompt("Enter two num:"));
+        if(n>=10 && n<=99){
+        a=parseInt(n/10);
+        b=n%10;
+        document.write("First digit "+a);
+        document.write("<br>");
+        document.write("Second Digit "+b);
+        document.write("<br>");
+
+            power=1;
+            for(i=1; i<=b;i++){
+                power=power*a;
+            }
+
+            document.write("Multiplied "+power);
+        }else{
+            alert("Chodina 2 digit number nakh");
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Functions</title>
+</head>
+<body>
+    <script>
+        n= parseInt(prompt("Enter Array size: "))
+        Arr = new Array(n);
+        
+        for(i=0;i<n;i++){
+            Arr[i] = parseInt(prompt("Enter element: "));
+        }
+            document.write("Old Array" + Arr)
+        a=parseInt(prompt(" "+Arr+"\nEnter \n 1 for Push, 2 for POP, 3 for Unshift, 4 for Shift"))
+        if(a==1){
+            push=parseInt (prompt("Enter the Element you want to push: "));
+            Arr.push(push);
+        } else if(a==2){
+            Arr.pop();
+        } else if(a==3){
+            add=parseInt(prompt("Enter the Element you want to add to the start: "));
+            Arr.unshift(add);
+        } else if(a==4){
+            Arr.shift();
+        };
+        document.write("<br> New Array" + Arr)
+    </script>
+</body>
+</html>

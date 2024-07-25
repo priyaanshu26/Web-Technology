@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Key</title>
+</head>
+
+<body>
+    <div class="container" style="font-size: xx-large; text-align: center;">
+        If Vovel <br>
+        Then Background color changes to Green. <br>
+        Else Background color changes to Red.
+
+    </div>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <div id="key" style="font-size: xx-large; text-align: center;">
+
+    </div>
+    <script>
+        document.body.addEventListener('keydown', (e) => {
+            if (e.key == 'a' || e.key == 'e' || e.key == 'i' || e.key == 'o' || e.key == 'u' || e.key == 'A' || e.key == 'E' || e.key == 'I' || e.key == 'O' || e.key == 'U') {
+                document.getElementById('key').innerHTML = e.key + " is pressed"
+            } else {
+                document.getElementById('key').innerHTML = "Consonant is pressed"
+                document.body.style.backgroundColor = 'red'
+
+            }
+        })
+        document.body.addEventListener('keyup', (e) => {
+            if (e.key == 'a' || e.key == 'e' || e.key == 'i' || e.key == 'o' || e.key == 'u' || e.key == 'A' || e.key == 'E' || e.key == 'I' || e.key == 'O' || e.key == 'U') {
+                document.body.style.backgroundColor = 'green'
+            }
+        })
+    </script>
+</body>
+
+</html>

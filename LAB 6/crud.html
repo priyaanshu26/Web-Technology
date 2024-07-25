@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+</head>
+
+<body>
+    <input type="text" id="name">
+    <input type="designation" id="designation">
+    <button onclick="Add()">Add</button>
+    <div id="display">
+    </div>
+    
+    <script>
+        a = [
+            {
+                "name": "Priyanshu",
+                "designation": "xyz"
+            }
+        ]
+        function display() {
+            tempString = "";
+            tempString += "<table border='1'>";
+            for (i = 0; i < a.length; i++) {
+                tempString += "<tr>";
+                tempString += "<td>" + a[i].name + "</td>";
+                tempString += "<td>" + a[i].designation + "</td>";
+                tempString += "<td><button onclick='Dlt(" + i + ")'>Delete</button></td>";
+                tempString += "<td><button onclick='Edit(" + i + ")'>Edit</button></td>";
+                tempString += "</tr>";
+            }
+            tempString += "</table>";
+
+            document.getElementById("display").innerHTML = tempString;
+        }
+
+        display();
+        function Add() {
+            obj = {
+                name: document.getElementById('name').value,
+                designation: document.getElementById('designation').value
+            }
+            a.push(obj)
+            display()
+        }
+        function Dlt(i){
+            a.splice(i,1);
+            display()
+        }
+        function Edit(i){
+
+        }
+    </script>
+</body>
+
+</html>

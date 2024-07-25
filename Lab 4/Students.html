@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Data</title>
+</head>
+<body>
+    <script>
+        var arr = [{
+            StudentName: "Priyanshu",
+            Enrollno: 1000000,
+            Department: "CSE",
+        },
+            {StudentName: "tnhbgrvc",
+            Enrollno: 45621,
+            Department: " gvfc",
+        },
+            {StudentName: "thbgrv",
+            Enrollno: 1525245,
+            Department: "tbgvf",
+        },
+            {StudentName: "tbgvf",
+            Enrollno: 9456,
+            Department: "nytbtrvfc",
+        },
+            {StudentName: "tnbhgrv",
+            Enrollno: 8465,
+            Department: "nygtfretdrs",
+        },            
+            {StudentName: "zelsbetjvx",
+            Enrollno: 6834735,
+            Department: "hdkrtfn",
+        }
+        ]
+        document.write("<table border=1")
+        document.write("<tr>")
+                document.write("<th>")
+                    document.write("Student Name")
+                    document.write("</th>")
+                    document.write("<th>")
+                    document.write("Roll No")
+                    document.write("</th>")
+                    document.write("<th>")
+                    document.write("Department")
+                    document.write("</th>")
+                document.write("</tr>")
+        for (let i = 0; i < arr.length; i++) {
+
+            document.write("<tr>")
+                document.write("<td>")
+            document.write(arr[i].StudentName)
+                document.write("</td>")
+                document.write("<td>")
+            document.write(arr[i].Enrollno)
+
+            document.write("</td>")
+            document.write("<td>")
+
+            document.write(arr[i].Department)
+            document.write("</td>")
+            document.write("</tr>")
+            }
+            document.write("</table>")
+    </script>
+</body>
+</html>
